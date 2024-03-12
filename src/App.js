@@ -1,14 +1,16 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Form from "./components/Form/Form";
-import WeatherInfo from "./components/WeatherInfo/WeatherInfo";
+import Form from "./features/Form/components/Form/Form";
+import WeatherInfo from "./features/WeatherInfo/components/WeatherInfo/WeatherInfo";
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route element={<Form />} path="/" />
-        <Route element={<WeatherInfo />} path="/weather" />
-      </Routes>
+      <div className="app__children">
+        <Routes>
+          <Route element={<Form />} path="/" />
+          <Route element={<WeatherInfo />} path="/weather" />
+        </Routes>
+      </div>
     </div>
   );
 }

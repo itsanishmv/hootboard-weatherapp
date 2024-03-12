@@ -1,4 +1,18 @@
+:root {
+  --blue: #43AEFC;
+  --white: #ffffff;
+  --grey: #CBCBCB;
+}
 .App {
-  background-color: #43AEFC;
+  background-color: var(--blue);
   height :100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__children{
+  background-color: var(--white);
+  min-height: 300px;
+  width: 400px;
+  border-radius: 12px;
 }

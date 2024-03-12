@@ -1,0 +1,7 @@
+.header__container {
+    font-family: 'Poppins';
+    font-size:x-small;
+    color : var(--blue);
+    padding : 0px 20px 0px 20px;
+    border-bottom: 1px solid var(--grey);
+}
