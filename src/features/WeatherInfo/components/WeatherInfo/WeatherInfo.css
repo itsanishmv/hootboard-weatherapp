@@ -37,3 +37,17 @@
     justify-content: center;
     gap : 4px
 }
+.city__not__found{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: xx-large;
+    font-weight: 600;
+    align-items: center;
+  
+    min-height : 250px
+}
+.city__not__found>img{
+    height: 86px;
+    width : 86px
+}
