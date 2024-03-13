@@ -9,6 +9,7 @@ function useGetCurrLocation() {
         long: position.coords.longitude,
       };
       setCurrDeviceCoords(obj);
+      console.log(obj);
     });
   }
 

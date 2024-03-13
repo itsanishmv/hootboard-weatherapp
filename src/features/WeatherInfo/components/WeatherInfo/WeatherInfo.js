@@ -1,33 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./WeatherInfo.css";
 import WeatherMetainfo from "../WeatherMetaInfo/WeatherMetainfo";
-import { getGeoLocation } from "../../../Form/api/getGeolocation";
 import { useLocation } from "react-router-dom";
 import { getWeatherInfo } from "../../api/getWeatherInfo";
+import Cloud from "../../../../assets/cloud.svg";
+import Location from "../../../../assets/location.svg";
+
 function WeatherInfo() {
   const location = useLocation();
+  const [data, setData] = useState();
   useEffect(() => {
     const urlDissect = location.pathname.split("/");
     const locationName = urlDissect[urlDissect.length - 1];
     if (urlDissect.length > 2) {
-      getWeatherInfo(locationName).then((data) => console.log(data));
+      getWeatherInfo(locationName).then((data) => setData(data));
     }
-  }, []);
+  }, [location.pathname]);
   return (
     <div className="weather__container">
       <div className="weather__main__info">
         <img
           className="weather__cloud__icon"
-          src="./cloud.svg"
-          alt="cloud image"
+          src={`https://openweathermap.org/img/wn/${data?.weather[0]?.icon}@4x.png`}
+          alt="cloud"
         />
-        <span className="weather__temperature">13C</span>
-        <span style={{ fontSize: "18px" }}>Broken clouds</span>
-        <span style={{ fontSize: "18px" }}>Kathmandu, Nepal</span>
+        <span className="weather__temperature">{data?.main.temp}°C</span>
+        <span className="weather__description">
+          {data?.weather[0]?.description}
+        </span>
+        <span className="weather__location">
+          <img src={Location} alt="location" />
+          {data?.name}, {data?.sys?.country}
+        </span>
       </div>
       <div className="weather__metainfo">
-        <WeatherMetainfo />
-        <WeatherMetainfo />
+        <WeatherMetainfo
+          data={data?.main?.feels_like}
+          label="Feels like"
+          symbol="°C"
+        />
+        <WeatherMetainfo
+          data={data?.main?.humidity}
+          label="Humidity"
+          symbol="%"
+        />
       </div>
     </div>
   );

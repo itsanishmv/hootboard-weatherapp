@@ -1,16 +1,21 @@
 import React from "react";
 import "./WeatherMetainfo.css";
-function WeatherMetainfo() {
+import Thermostat from "../../../../assets/thermostat.svg";
+import WaterDrop from "../../../../assets/waterdrop.svg";
+function WeatherMetainfo({ data, label, symbol }) {
   return (
     <div className="weather__meta">
       <img
         className="weather__meta__icon"
-        src="./arrowback.svg"
-        alt="temperature icon"
+        src={label === "Feels like" ? Thermostat : WaterDrop}
+        alt={label === "Feels like" ? "thermostat icon" : "waterdrop icon"}
       />
       <div className="weather__meta__info">
-        <span>18C</span>
-        <span>Feels like</span>
+        <span className="weather__meta__info__data">
+          {data}
+          {symbol}
+        </span>
+        <span className="weather__meta__label">{label}</span>
       </div>
     </div>
   );

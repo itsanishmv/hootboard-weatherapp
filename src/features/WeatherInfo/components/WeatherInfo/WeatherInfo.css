@@ -7,8 +7,13 @@
 .weather__metainfo {
     display: flex;
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--grey);
     font-family: "Poppins";
+}
+.weather__description{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
 }
 .weather__main__info{
     padding: 30px;
@@ -24,4 +29,11 @@
 .weather__temperature{
     font-size: 54px;
     font-weight: 800;
+}
+.weather__location{
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap : 4px
 }

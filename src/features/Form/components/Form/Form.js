@@ -9,19 +9,16 @@ const Form = () => {
   const { currDeviceCoords, getCoords } = useGetCurrLocation();
   const [input, setInput] = useState();
   const router = useNavigate();
-  function getWeatherData(locationInput) {
-    console.log(locationInput);
-  }
-  function someFunc(e) {
+  function handleKeyDown(e) {
     if (e.key === "Enter") {
-      getWeatherData(input);
+      router(`/weather/${input}`);
     }
   }
   useEffect(() => {
     if (currDeviceCoords) {
       getGeoLocation(currDeviceCoords).then((data) => {
         if (data) {
-          router(`/weather/${data[0].name}`);
+          router(`/weather/${data.name.toLowerCase()}`);
         }
       });
     }
@@ -30,7 +27,7 @@ const Form = () => {
   return (
     <div className="form__container">
       <div className="form__body">
-        <Input handler={setInput} onEnter={someFunc} />
+        <Input handler={setInput} onEnter={handleKeyDown} />
         <span className="form__or">or</span>
         <Button handler={getCoords} />
       </div>
