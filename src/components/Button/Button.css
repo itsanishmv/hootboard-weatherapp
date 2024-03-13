@@ -3,4 +3,11 @@
 }
 .button {
     width: 100%;
+    height : 56px;
+    border-radius: 6px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: "Poppins";
+    font-size: large;
+    border: none;
 }

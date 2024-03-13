@@ -1,7 +1,35 @@
 .form__container {
-
     background-color: white;
 }
 .form__body {
-    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px ;
+}
+
+.form__or{
+    display: flex;
+    align-items: center;
+    height : 20px;
+    font-family: "Poppins";
+    color : var(--darkGrey)
+}
+.form__or::before{
+    content: "";
+    display: flex;
+    width : 100px;
+    height : 0.5px;
+    margin-right: 20px;
+    background-color: var(--grey);
+}
+.form__or::after{
+    content: "";
+    display: flex;
+    width : 100px;
+    height : 0.5px;
+    margin-left: 20px;
+    background-color: var(--grey);
+   
 }

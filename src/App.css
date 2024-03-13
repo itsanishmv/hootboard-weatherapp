@@ -2,6 +2,7 @@
   --blue: #43AEFC;
   --white: #ffffff;
   --grey: #CBCBCB;
+  --darkGrey : #9e9c9c;
 }
 .App {
   background-color: var(--blue);
@@ -12,7 +13,7 @@
 }
 .app__children{
   background-color: var(--white);
-  min-height: 300px;
+  min-height: 250px;
   width: 400px;
   border-radius: 12px;
 }
