@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Routes>
           <Route element={<Form />} path="/" />
-          <Route element={<WeatherInfo />} path="/weather" />
+          <Route element={<WeatherInfo />} path="/weather/:id" />
         </Routes>
       </div>
     </div>

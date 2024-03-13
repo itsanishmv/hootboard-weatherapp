@@ -1,21 +1,27 @@
 .weather__container {
     display: flex;
     flex-direction: column;
-    position: relative;
     min-height : 250px;
 }
 
 .weather__metainfo {
     display: flex;
-    position: absolute;
     width: 100%;
-    bottom : 0;
     border-top: 1px solid black;
-    height: 50px;
+    font-family: "Poppins";
 }
-.weather__feelslike {
-    width : 50%;
+.weather__main__info{
+    padding: 30px;
     display: flex;
-    justify-content: center;
-    border-right: 1px solid black;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.weather__cloud__icon{
+    height : 100px;
+    width: 100px;
+}
+.weather__temperature{
+    font-size: 54px;
+    font-weight: 800;
 }

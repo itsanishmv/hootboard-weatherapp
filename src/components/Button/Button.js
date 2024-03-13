@@ -1,8 +1,8 @@
 import React from "react";
 import "./Button.css";
-function Button() {
+function Button({ handler }) {
   return (
-    <div className="button__container">
+    <div onClick={handler} className="button__container">
       <button className="button">Get device location</button>
     </div>
   );

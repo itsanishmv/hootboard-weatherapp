@@ -1,0 +1,12 @@
+
+.weather__meta {
+    padding: 10px;
+    width : 50%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+.weather__meta__info {
+    display: flex;
+    flex-direction: column;
+}
