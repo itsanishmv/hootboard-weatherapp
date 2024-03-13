@@ -2,6 +2,7 @@
     width: 100%;
 }
 .button {
+    cursor: pointer;
     width: 100%;
     height : 56px;
     border-radius: 6px;
