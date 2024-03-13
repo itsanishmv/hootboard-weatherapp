@@ -1,0 +1,14 @@
+.error__container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 50px;
+    font-family: "Poppins";
+}
+.error__image{
+    height : 86px ;
+    width: 86px;
+}

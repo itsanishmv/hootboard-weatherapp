@@ -29,7 +29,7 @@ const Form = () => {
       <div className="form__body">
         <Input handler={setInput} onEnter={handleKeyDown} />
         <span className="form__or">or</span>
-        <Button handler={getCoords} />
+        <Button handler={getCoords} label="Get device location" />
       </div>
     </div>
   );
