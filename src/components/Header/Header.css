@@ -1,7 +1,16 @@
 .header__container {
+    display: flex;
+    align-items: center;
+    gap : 8px;
     font-family: 'Poppins';
     font-size:x-small;
     color : var(--blue);
     padding : 0px 20px 0px 20px;
     border-bottom: 1px solid var(--grey);
+}
+.icon{
+    fill: var(--blue) !important; 
+    stroke-width: 10px;
+    cursor: pointer;
+    
 }

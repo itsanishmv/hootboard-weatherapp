@@ -1,9 +1,13 @@
 import React from "react";
-import Header from "../../../../components/Header/Header";
+import "./WeatherInfo.css";
+import WeatherMetainfo from "../WeatherMetaInfo/WeatherMetainfo";
 function WeatherInfo() {
   return (
-    <div>
-      <Header />
+    <div className="weather__container">
+      <div className="weather__metainfo">
+        <WeatherMetainfo />
+        <WeatherMetainfo />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.weather__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height : 250px;
+}
+
+.weather__metainfo {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom : 0;
+    border-top: 1px solid black;
+    height: 50px;
+}
+.weather__feelslike {
+    width : 50%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid black;
+}
