@@ -9,6 +9,9 @@ This is a simple Weather App that provides users with current weather conditions
 - View current weather conditions
 - You can share the URL with your friends to show the weather information for the city you searched.
 - Responsive design for mobile and desktop
+  
+## Demo
+You can try out the live demo of the Weather App [here](https://hootboard-weatherapp.vercel.app/).
 
 ## Technologies Used
 - React.js
