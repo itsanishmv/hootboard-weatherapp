@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function useGetCurrLocation() {
   const [currDeviceCoords, setCurrDeviceCoords] = useState();
@@ -9,7 +9,6 @@ function useGetCurrLocation() {
         long: position.coords.longitude,
       };
       setCurrDeviceCoords(obj);
-      console.log(obj);
     });
   }
 
